@@ -12,7 +12,7 @@ import com.tgarasanin.coderswag.R
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.category_list_item.view.*
-
+/*
 class CategoryAdapter (context: Context, categories: List<Category>): BaseAdapter() {
 
     val context = context
@@ -62,3 +62,6 @@ class CategoryAdapter (context: Context, categories: List<Category>): BaseAdapte
 
 
 }
+
+
+ */
