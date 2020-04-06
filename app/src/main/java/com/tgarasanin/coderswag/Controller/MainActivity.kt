@@ -2,6 +2,7 @@ package com.tgarasanin.coderswag.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.LinearLayout
 import android.widget.Toast
@@ -21,10 +22,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        adapter = CategoryRecyclerAdapter(this, DataService.categories)
+        adapter = CategoryRecyclerAdapter(this, DataService.categories) { category ->
+            Log.d("TAG", category.title)
+            
+        }
+
         layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         categoryRecyclerView.adapter = adapter
         categoryRecyclerView.layoutManager = layoutManager
         categoryRecyclerView.setHasFixedSize(true)
     }
+
+
+
+
 }
